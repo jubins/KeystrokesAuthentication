@@ -94,3 +94,15 @@ Predict Model CSV Export/Download - exports the csv if user wants to view all th
 
 Predict Model Prediction CSV
 ![PredictModelPredictionCSV](https://github.com/jubins/KeystrokesAuthentication/blob/master/images/evaluate_model_4.png)
+
+### Additional Questions
+1. If you had one additional day, what would you change or improve to your submission?
+- I would improve my model performace. In this project I have mostly focused on building an infrastructure used by software engineers that allows for the model to be easily trained, deployed and evaluated and compared across previous versions of models. If I had more time I wold also like to add some charts to visualize performance and comparison, more model options, feature engineering options to further improve my app.
+2. How would you modify your solution if the number of users was 1,000 times larger?
+- My current app is monolithic, I have tried separating the services for data pipeline, model training and evaluation but they still depend on each other. If the users was 1,000 times larger I would also use something like Apache Spark or distributed infrastructure to prepare training data and train the models.
+3. What insights and takeaways do you have on the distribution of user performance?
+- I noticed that the number of user inputs reduced as we iterate through the list of users. Also I plotted the user typing chart below if we consider the typing pattern, time (speed) or maybe even account for mistakes they make we can get a unique figerprint considering all these features.
+4. What aspect(s) would you change about this challenge?
+- I enjoyed working on this challenge. I wish I had more time to finish it.
+5. What aspect(s) did you enjoy about this challenge?
+- I enjoyed everything from exploring the dataset, model building, designing the platform to train, deploy and evaluate model.

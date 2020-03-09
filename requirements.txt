@@ -4,3 +4,6 @@ scikit-learn
 keras
 matplotlib
 pandas
+gunicorn
+django-heroku
+whitenoise

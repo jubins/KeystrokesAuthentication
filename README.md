@@ -31,6 +31,7 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
 Go to http://127.0.0.1:8000/ browser and you should be able to access the pages.
+GitHub url: https://github.com/jubins/KeystrokesAuthentication
 
 ### Homepage
 This is the first page user will see when they start the project
@@ -106,3 +107,12 @@ Predict Model Prediction CSV
 - I enjoyed working on this challenge. I wish I had more time to finish it.
 5. What aspect(s) did you enjoy about this challenge?
 - I enjoyed everything from exploring the dataset, model building, designing the platform to train, deploy and evaluate model.
+
+### User Keystrokes DNA Charts based on training data
+![1](https://github.com/jubins/KeystrokesAuthentication/blob/master/user_analysis_charts/u1.png)
+![2](https://github.com/jubins/KeystrokesAuthentication/blob/master/user_analysis_charts/u2.png)
+![3](https://github.com/jubins/KeystrokesAuthentication/blob/master/user_analysis_charts/u3.png)
+![4](https://github.com/jubins/KeystrokesAuthentication/blob/master/user_analysis_charts/u4.png)
+![5](https://github.com/jubins/KeystrokesAuthentication/blob/master/user_analysis_charts/u5.png)
+![13](https://github.com/jubins/KeystrokesAuthentication/blob/master/user_analysis_charts/u13.png)
+![14](https://github.com/jubins/KeystrokesAuthentication/blob/master/user_analysis_charts/u14.png)

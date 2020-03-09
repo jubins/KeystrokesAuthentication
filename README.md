@@ -46,7 +46,7 @@ The view consists of:
 2. **Feature engineering**: Generates new features like `year`, `month`, `day`, `hour`, `minute`, `second`, `microsecond` and transforms categorical features like `Be Authentic. Be Yourself. Be Typing.` into numerical.
 
 Analyze Training Data
-![AnalyzeTrainingData](https://github.com/jubins/KeystrokesAuthentication/blob/master/images/analyze_training_set.png)
+![AnalyzeTrainingData](https://github.com/jubins/KeystrokesAuthentication/blob/master/images/analyze_training_data.png)
 
 ### Model Training
 The Training view follows below properties:
@@ -80,7 +80,10 @@ This view consists of:
 1. **View Predictions**: The chosen model gets loaded as the user clicks on this button and prediction is performed.
 2. **Export Predictions To CSV**: View only displays first n predictions upto 1000. To view all the predictions a CSV file named `output_predicitions.csv` is prepared as the user clicks on this button and prompted to download it.
 
-Predict Model Form and Loading Notification - inputs to enter test data url, choose already trained model and notifies the user once the model is being loaded.
+Predict Model Form - inputs to enter test data url, choose already trained model.
+![PredictModelForm](https://github.com/jubins/KeystrokesAuthentication/blob/master/images/evaluate_model_0.png)
+
+Predict Model Loading Notification - notifies the user once the model is being loaded.
 ![PredictModelNotification](https://github.com/jubins/KeystrokesAuthentication/blob/master/images/evaluate_model_1.png)
 
 Predict Model Prediction - shows predictions for each user for first n users.

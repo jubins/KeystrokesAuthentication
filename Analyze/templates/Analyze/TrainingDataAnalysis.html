@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified jQuery -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Analyze Training Data</title>
+</head>
+<body>
+<div class="col-md-12 mb-3">
+    <div class="text-center">
+        <p style="font-size: 50px">Analyze Training Data</p>
+        <a id="home" class="btn btn-warning" role="button" type="submit" href="{% url 'dashboard' %}">Back to Homepage</a>
+    </div>
+    <h1>Data Options</h1>
+    <form>
+        <div class="form-row">
+            <div class="col-md-12 mb-3">
+                <label for="training_data_url">Training Data Url</label>
+                <input type="url" class="form-control" name="training_data_url" id="training_data_url" placeholder="Enter training data url" value="https://challenges.unify.id/v1/mle/user_4a438fdede4e11e9b986acde48001122.json" required>
+            </div>
+            <div class="col-md-12 mb-3">
+                <label for="first_n">Display First N Rows</label>
+                <input type="number" class="form-control" name="first_n" id="first_n" placeholder="Display first n rows" value="15" required>
+            </div>
+        </div>
+        <div class="col-md-12 mb-3">
+            <form>
+                {% csrf_token %}
+                <button id="submit" class="btn btn-primary" type="submit" value="ok">View Training Data</button>
+            </form>
+        </div>
+    </form>
+</div>
+<div class="col-md-12 mb-3">
+    <form id="data_results_div" hidden>
+        <h1>Training Data</h1>
+        <table class="table table-hover" id="results_table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">User</th>
+                <th scope="col">Typed At</th>
+                <th scope="col">Character</th>
+                <th scope="col">Year</th>
+                <th scope="col">Month</th>
+                <th scope="col">Day</th>
+                <th scope="col">Hour</th>
+                <th scope="col">Minute</th>
+                <th scope="col">Second</th>
+                <th scope="col">Microsecond</th>
+            </tr>
+            </thead>
+            <tbody id="table_data">
+
+            </tbody>
+        </table>
+    </form>
+</div>
+</body>
+
+<script type="text/javascript">
+    function getCookie(name) {
+        var cookieValue = null;
+        if (document.cookie && document.cookie != '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = jQuery.trim(cookies[i]);
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+
+    function csrfSafeMethod(method) {
+        // these HTTP methods do not require CSRF protection
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+    }
+    $.ajaxSetup({
+        beforeSend: function(xhr, settings) {
+            if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                const csrftoken = getCookie('csrftoken');
+                xhr.setRequestHeader("X-CSRFToken", csrftoken);
+            }
+        }
+    });
+
+    $('#submit').on("click", function (e) {
+        e.preventDefault();
+        var training_data_url = $('#training_data_url');
+        var first_n = $('#first_n');
+        if (verify_required_fields(training_data_url)) {
+            $.ajax({
+                method: "POST",
+                url: "{% url 'analyze' %}?training_data_url=" + training_data_url.val()+'&first_n='+first_n.val(),
+                contentType: "application/json",
+                // data: data,
+            })
+                .always(function (result, xhr) {
+                    $('#data_results_div').show();
+                    if (!xhr.hasOwnProperty('error')) {
+                        var table_data = $('#table_data');
+                        table_data.empty();
+                        var listings = result['listings'];
+                        var rows = [];
+                        for (var i in listings) {
+                            rows.push("<tr><th scope='row'>" + listings[i]['id'] + "</th><th scope='row'>" + listings[i]['user'] + "</th><th scope='row'>" + listings[i]['typed_at'] + "</th><th scope='row'>" + listings[i]['character'] + "</th><th scope='row'>" + listings[i]['year'] + "</th><th scope='row'>" + listings[i]['month'] + "</th><th scope='row'>" + listings[i]['day'] + "</th><th scope='row'>" + listings[i]['hour'] + "</th><th scope='row'>" + listings[i]['minute'] + "</th><th scope='row'>" + listings[i]['second'] + "</th><th scope='row'>" + listings[i]['microsecond'] + "</th></span></a></th></tr>");
+                        }
+                        rows = rows.join('\n');
+                        table_data.html(rows);
+                    } else {
+                        alert(xhr.error);
+                    }
+                });
+        }
+    });
+
+    function verify_required_fields(url) {
+        if (!url){
+            return false
+        }else {
+            return true;
+        }
+    }
+
+</script>
+<style>
+    .empty {
+        border: 1px solid red;
+    }
+</style>
+</html>

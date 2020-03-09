@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c6c1e5b-4bb0-4bce-8aec-417d1f3f7c65" name="Default Changelist" comment="" />
+    <list default="true" id="7c6c1e5b-4bb0-4bce-8aec-417d1f3f7c65" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Analyze/templates/Analyze/TrainingDataAnalysis.html" beforeDir="false" afterPath="$PROJECT_DIR$/Analyze/templates/Analyze/TrainingDataAnalysis.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Evaluate/templates/Evaluate/ModelEvaluation.html" beforeDir="false" afterPath="$PROJECT_DIR$/Evaluate/templates/Evaluate/ModelEvaluation.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +42,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="14" />
-          <entry key="html" value="17" />
+          <entry key="html" value="18" />
           <entry key="py" value="33" />
           <entry key="txt" value="3" />
         </counts>
@@ -47,21 +50,21 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSV" value="14" />
-          <entry key="HTML" value="17" />
+          <entry key="HTML" value="18" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="Python" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="3017" />
+          <entry key="html" value="3034" />
           <entry key="py" value="5747" />
           <entry key="txt" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="3017" />
+          <entry key="HTML" value="3034" />
           <entry key="PLAIN_TEXT" value="7" />
           <entry key="Python" value="5747" />
         </counts>
@@ -85,15 +88,27 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Evaluate/templates/Evaluate/ModelEvaluation.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="996">
-              <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
+            <state relative-caret-position="590">
+              <caret line="47" column="58" selection-start-line="47" selection-start-column="58" selection-end-line="47" selection-end-column="85" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#3;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Analyze/templates/Analyze/TrainingDataAnalysis.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="478">
+              <caret line="35" column="65" selection-start-line="35" selection-start-column="65" selection-end-line="35" selection-end-column="65" />
+              <folding>
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -130,6 +145,7 @@
       <find>save</find>
       <find>PRedict</find>
       <find>rad</find>
+      <find>first</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -150,13 +166,13 @@
         <option value="$PROJECT_DIR$/Dashboard/views.py" />
         <option value="$PROJECT_DIR$/Dashboard/templates/Dashboard/Homepage.html" />
         <option value="$PROJECT_DIR$/Train/models.py" />
-        <option value="$PROJECT_DIR$/Analyze/templates/Analyze/TrainingDataAnalysis.html" />
         <option value="$PROJECT_DIR$/Analyze/views.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/Train/views.py" />
         <option value="$PROJECT_DIR$/Evaluate/views.py" />
         <option value="$PROJECT_DIR$/Train/templates/Train/ModelTraining.html" />
         <option value="$PROJECT_DIR$/Evaluate/templates/Evaluate/ModelEvaluation.html" />
+        <option value="$PROJECT_DIR$/Analyze/templates/Analyze/TrainingDataAnalysis.html" />
       </list>
     </option>
   </component>
@@ -250,7 +266,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583714412289" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583718567892" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -289,15 +305,16 @@
       <option name="presentableId" value="Default" />
       <updated>1583632681653</updated>
       <workItem from="1583632683583" duration="11681000" />
-      <workItem from="1583646324576" duration="28659000" />
+      <workItem from="1583646324576" duration="29307000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40340000" />
+    <option name="totallyTimeSpent" value="40988000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="134" y="35" width="1853" height="2125" extended-state="4" />
+    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="1" />
@@ -305,7 +322,7 @@
       <window_info id="Favorites" order="3" sideWeight="0.27138644" side_tool="true" weight="0.24835165" />
       <window_info id="Image Layers" order="4" />
       <window_info id="Capture Tool" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.72861356" visible="true" weight="0.33371106" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.72861356" visible="true" weight="0.33371106" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.39937106" />
@@ -315,7 +332,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32914045" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49813133" visible="true" weight="0.2897146" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49813133" visible="true" weight="0.2897146" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50186867" side_tool="true" weight="0.2894029" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -460,16 +477,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Analyze/templates/Analyze/TrainingDataAnalysis.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="106" column="8" selection-start-line="106" selection-start-column="8" selection-end-line="106" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_data_sample_test.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="-340157">
@@ -536,12 +543,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Evaluate/templates/Evaluate/ModelEvaluation.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="996">
-          <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
+        <state relative-caret-position="590">
+          <caret line="47" column="58" selection-start-line="47" selection-start-column="58" selection-end-line="47" selection-end-column="85" />
           <folding>
             <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Analyze/templates/Analyze/TrainingDataAnalysis.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="35" column="65" selection-start-line="35" selection-start-column="65" selection-end-line="35" selection-end-column="65" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

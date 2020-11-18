@@ -1,5 +1,5 @@
 # Keystrokes Authentication
-In this project I've built a working prototype of a system that allows software engineers to easily train, deploy and evaluate a machine learning or a neural network classifier. The system takes training data url as an input having `user_data`, `user_label` and `next` elements and analyzes their typing patterns of string **Be Authentic. Be Yourself. Be Typing.** and creates a model that can be used for prediction on any new dataset. Deploy url: https://keystroke-authentication-jubin.herokuapp.com/
+In this project I've built a working prototype of a system that allows software engineers to easily train, deploy and evaluate a machine learning or a neural network classifier. The system takes training data url as an input having `user_data`, `user_label` and `next` elements and analyzes their typing patterns of string **Be Authentic. Be Yourself. Be Typing.** and creates a model that can be used for prediction on any new dataset. Deploy url: [Keystrokes App](https://keystroke-authentication-jubin.herokuapp.com/dashboard/)
 
 This app has been created using Python Django web framework as backend, SQLite as database and HTML, CSS, Bootstrap and jQuery for the fronend.
 
